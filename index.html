@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例分析: Schechter Poultry Corp. v. United States (导航版)</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+    <style>
+        /* Inter 字体 */
+        body {
+            font-family: 'Inter', 'sans-serif', -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background-color: #f3f4f6; /* gray-100 */
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            body {
+                padding: 2rem;
+            }
+        }
+        
+        /* 折叠面板样式 */
+        .content-panel {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            margin-top: 0;
+        }
+        
+        .content-panel.open {
+            max-height: 2000px; /* 一个足够大的值 */
+            opacity: 1;
+            margin-top: 0.75rem; /* 12px, 对应 space-y-3 */
+        }
+        
+        /* 页面切换逻辑 */
+        .page {
+            display: none; /* 默认所有内容页隐藏 */
+        }
+        
+        #main-menu-page {
+            display: block; /* 默认显示主菜单 */
+        }
+        
+        /* 美化滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        <!-- 网页主标题 -->
+        <header class="bg-blue-800 p-6 text-white">
+            <h1 class="text-3xl font-bold">案例分析与知识库 (导航版)</h1>
+            <p class="text-xl mt-1 opacity-90">A.L.A. Schechter Poultry Corp. v. United States (1935)</p>
+        </header>
+
+        <!-- 主体内容容器 -->
+        <main>
+            <!-- =================================== -->
+            <!-- 页面 0: 主菜单 (标题画面) -->
+            <!-- =================================== -->
+            <div id="main-menu-page" class="p-6 md:p-10">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">请选择一个模块：</h2>
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- 导航按钮 1 -->
+                    <button class="nav-btn w-full p-6 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-150 transform hover:-translate-y-1" data-target="page-1">
+                        <h3 class="text-xl font-semibold">1. 设计工具、方法与过程</h3>
+                        <p class="mt-1 opacity-90">查看本网页的构建思路和技术栈。</p>
+                    </button>
+                    
+                    <!-- 导航按钮 2 -->
+                    <button class="nav-btn w-full p-6 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-150 transform hover:-translate-y-1" data-target="page-2">
+                        <h3 class="text-xl font-semibold">2. 法庭意见书要素 (英文)</h3>
+                        <p class="mt-1 opacity-90">深入分析判决书的法律要素。</p>
+                    </button>
+
+                    <!-- 导航按钮 3 -->
+                    <button class="nav-btn w-full p-6 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-150 transform hover:-translate-y-1" data-target="page-3">
+                        <h3 class="text-xl font-semibold">3. 双语知识库</h3>
+                        <p class="mt-1 opacity-90">搜索本案例相关的法律术语和句型。</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- =================================== -->
+            <!-- 页面 1: 设计工具、方法、过程 (中文) -->
+            <!-- =================================== -->
+            <div id="page-1" class="page p-4 md:p-6">
+                <!-- 返回按钮 -->
+                <button class="back-btn mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+                    &larr; 返回主菜单
+                </button>
+                
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">1. 设计工具、方法与过程</h2>
+                
+                <!-- 内部折叠内容 - 简化为一栏 -->
+                <div class="space-y-3">
+                    <!-- 二级标题: 设计工具、方法与过程概述 -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">设计工具、方法与过程概述</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel open-by-default p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <p class="italic text-gray-600">注：本网页代码使用 Google Gemini 2.5pro 辅助生成</p>
+                            <p class="font-semibold">设计者：翟方毅 230608005</p>
+                            
+                            <h4 class="font-semibold mt-3">设计工具</h4>
+                            <ul>
+                                <li><strong>HTML5:</strong> 构建网页基本结构和语义。</li>
+                                <li><strong>Tailwind CSS:</strong> 快速构建美观、响应式的用户界面。</li>
+                                <li><strong>JavaScript:</strong> 实现页面导航、折叠面板和搜索功能。</li>
+                            </ul>
+                            
+                            <h4 class="font-semibold mt-3">设计方法</h4>
+                            <ul>
+                                <li><strong>内容提取与分析:</strong> 提炼判决书原文中的法律教育核心要素。</li>
+                                <li><strong>交互式学习设计:</strong> 使用折叠菜单组织内容，提升用户体验。</li>
+                                <li><strong>双语知识库构建:</strong> 创建法律术语和句型的双语对照系统。</li>
+                            </ul>
+                            
+                            <h4 class="font-semibold mt-3">设计过程</h4>
+                            <ul>
+                                <li><strong>需求解析:</strong> 理解用户需要的导航逻辑和内容组织方式。</li>
+                                <li><strong>结构设计:</strong> 建立主菜单和内容页面的层次结构。</li>
+                                <li><strong>功能实现:</strong> 开发导航、折叠和搜索功能。</li>
+                                <li><strong>内容整合:</strong> 将法律案例内容系统化地整合到网页中。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================== -->
+            <!-- 页面 2: 法庭意见书要素 (英文) -->
+            <!-- =================================== -->
+            <div id="page-2" class="page p-4 md:p-6">
+                <!-- 返回按钮 -->
+                <button class="back-btn mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+                    &larr; 返回主菜单
+                </button>
+
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">2. Elements of the Court Opinion</h2>
+                
+                <p class="text-sm text-gray-600 mb-4 italic">说明：本页中的关键法律术语已添加链接，点击可在新窗口中使用 Google 搜索该词汇的详细解释。</p>
+
+                <!-- 内部折叠内容 -->
+                <div class="space-y-3">
+                    <!-- 二级标题: Case Citation & Caption -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Case Citation & Caption</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel open-by-default p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <p><strong>A.L.A. Schechter Poultry Corporation et al. v. United States</strong>, 295 U.S. 495 (1935). Argued May 2-3, 1935. Decided May 27, 1935.</p>
+                        </div>
+                    </div>
+                    <!-- 二级标题: Procedural History -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Procedural History</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <p>Defendants (Schechter Poultry Corp. et al.) were <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="indicted">indicted</a> in the U.S. District Court for the Eastern District of New York on 60 counts. After dismissals and acquittals, they were <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="convicted">convicted</a> on 18 counts for violating the "Live Poultry Code" and one count for <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="conspiracy">conspiracy</a> to commit such violations.</p>
+                            <p class="mt-2">The <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="Circuit Court of Appeals">Circuit Court of Appeals</a> for the Second Circuit <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="sustained the conviction">sustained the conviction</a> on the conspiracy count and on 16 counts for code violations, but <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="reversed the conviction">reversed the conviction</a> on two counts which charged violations of minimum wage and maximum hour provisions (holding these were not within federal power).</p>
+                            <p class="mt-2">Both the defendants (No. 854) and the government (No. 864, appealing the reversal of the wage/hour counts) petitioned the Supreme Court. The Supreme Court granted <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="writs of certiorari">writs of certiorari</a> for both cases.</p>
+                        </div>
+                    </div>
+                    <!-- 二级标题: Statement of Facts -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Statement of Facts</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <p>The defendants were slaughterhouse operators (or "marketmen") in Brooklyn, New York. New York City is the largest live poultry market in the U.S., with 96% of its poultry coming from other states.</p>
+                            <p class="mt-2">Defendants purchased live poultry from commission men at railroad terminals in New York and New Jersey after the poultry had completed its <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="interstate journey">interstate journey</a>. They then trucked the poultry to their slaughterhouses in Brooklyn.</p>
+                            <p class="mt-2">At their slaughterhouses, they slaughtered the poultry and sold it *locally* to retail dealers and butchers. These sales were not in <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="interstate commerce">interstate commerce</a>. The "Live Poultry Code," which they were convicted of violating, was a <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="code of fair competition">"code of fair competition"</a> for the NYC metropolitan area, <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="promulgated">promulgated</a> by the President under Section 3 of the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="National Industrial Recovery Act (NIRA)">National Industrial Recovery Act (NIRA)</a>.</p>
+                            <p class="mt-2">The specific violations charged included:
+                                <ul>
+                                    <li>Violating the minimum wage (50 cents/hr) and maximum hour (40/week) provisions for their employees.</li>
+                                    <li>Violating Article VII, Section 14 (the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="straight killing provision schechter">"straight killing" provision</a>) by allowing retail dealers to "make selection of individual chickens taken from particular coops," rather than requiring them to purchase the "run of any half coop, coop, or coops."</li>
+                                    <li>Selling an "unfit chicken" and making false reports.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 二级标题: Core Legal Issues -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Core Legal Issues</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <ol>
+                                <li>Did Congress, through the NIRA, <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="unconstitutionally delegate its legislative power">unconstitutionally delegate its legislative power</a> to the President by authorizing him to approve "codes of fair competition" without establishing clear standards?</li>
+                                <li>Did the "Live Poultry Code" attempt to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="regulate intrastate transactions">regulate intrastate transactions</a> (like the defendants' local slaughtering and sales) that lay beyond the authority of Congress under the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="Commerce Clause">Commerce Clause</a>?</li>
+                                <li>(As raised by defendants, but not decided by the Court) Were the code's provisions in certain respects repugnant to the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="due process clause of the Fifth Amendment">due process clause of the Fifth Amendment</a>?</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- 二级标题: Holding & Judgment -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Holding & Judgment</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <p>The Supreme Court, in a <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="unanimous decision">unanimous decision</a>, reversed the judgment of the Circuit Court. It held the "Live Poultry Code" invalid and reversed the conviction.</p>
+                            <p class="mt-2">The Court found for the defendants on the two primary legal issues:
+                                <ol>
+                                    <li><strong>Yes.</strong> The NIRA's delegation of code-making authority to the President was an <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="unconstitutional delegation of legislative power">unconstitutional delegation of legislative power</a>.</li>
+                                    <li><strong>Yes.</strong> The code's provisions as applied to the defendants' business were an attempt to regulate <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="intrastate commerce">intrastate commerce</a> that only <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="indirectly affected interstate commerce">indirectly affected interstate commerce</a>, which is beyond the constitutional reach of Congress.</li>
+                                </ol>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 二级标题: Reasoning (Opinion of the Court) -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Reasoning (Opinion of the Court)</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <h4 class="font-semibold">I. Unconstitutional Delegation of Legislative Power</h4>
+                            <ul>
+                                <li>Chief Justice Hughes, writing for the Court, stated that Section 3 of the NIRA is <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="without precedent">"without precedent."</a> It <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="supplies no standards">"supplies no standards for any trade, industry, or activity."</a></li>
+                                <li>The Act does not "prescribe rules of conduct," but rather "authorizes the making of codes to prescribe them." The "Declaration of Policy" in Section 1 of the Act was deemed too broad to serve as a meaningful standard.</li>
+                                <li>This lack of standards gave the President <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="virtually unfettered discretion">"virtually unfettered discretion to make whatever laws he thinks may be needed or advisable."</a></li>
+                                <li>The Court held that "The Congress is not permitted to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="abdicate or to transfer essential legislative functions">"abdicate or to transfer to others the essential legislative functions</a> with which it is thus vested." This was not a valid delegation but an unconstitutional transfer of power.</li>
+                            </ul>
+                            <h4 class="font-semibold mt-3">II. Scope of the Commerce Clause</h4>
+                            <ul>
+                                <li>The Court first determined that the defendants' transactions were not <strong><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="in interstate commerce">"in interstate commerce"</a></strong>. The <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="flow of commerce had ceased">"flow of commerce had ceased"</a> when the poultry arrived at the Brooklyn slaughterhouses. "The poultry had come to a permanent rest within the state."</li>
+                                <li>The Court then asked if these purely intrastate activities <strong><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="directly affected interstate commerce">"directly affected interstate commerce"</a></strong>. It found they did not.</li>
+                                <li>It re-emphasized the "necessary and well-established distinction between <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="direct and indirect effects commerce clause">direct and indirect effects</a>." The defendants' employee wages, hours, and local sales practices had "no direct relation to interstate commerce."</li>
+                                <li>The government's argument (that low wages/long hours affect local prices, which in turn affect the demand for poultry from other states) was rejected as <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="argument proves too much">proving "too much."</a></li>
+                                <li>If such *indirect* effects were sufficient, "it would seem that a similar control might be exerted over other elements of cost... rents, advertising, methods of doing business... All the processes of production and distribution... could likewise be controlled."</li>
+                                <li>The Court concluded that accepting this argument "would be to destroy the distinction... between commerce 'among the several States' and the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="internal concerns of a state">internal concerns of a state</a>."</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 二级标题: Concurring Opinion (Cardozo, J.) -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">Concurring Opinion (Cardozo, J.)</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
+                            <ul>
+                                <li>Justice Cardozo (joined by Justice Stone) wrote a separate <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="concurrence">concurrence</a> to emphasize his agreement, particularly on the delegation point.</li>
+                                <li>He argued this delegation was far worse than the one struck down in *Panama Refining Co. v. Ryan* earlier that year. He wrote the power delegated here was <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="not canalized within banks that keep it from overflowing">"not canalized within banks that keep it from overflowing. It is unconfined and vagrant."</a></li>
+                                <li>He famously stated this was not just a delegation to stop "unfair" practices, but to regulate all "ordinances... desirable or helpful for the well-being or prosperity of the industry." He concluded: <strong><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="delegation running riot">"This is delegation running riot."</a></strong></li>
+                                <li>On the Commerce Clause, he agreed the connection was too remote. "The law is not indifferent to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="considerations of degree">"considerations of degree..."</a> To find immediacy or directness here is to find it almost everywhere. If centripetal forces are to be isolated... there will be an end to our <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="federal system">federal system</a>."</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================== -->
+            <!-- 页面 3: 双语知识库 (含搜索) -->
+            <!-- =================================== -->
+            <div id="page-3" class="page p-4 md:p-6">
+                <!-- 返回按钮 -->
+                <button class="back-btn mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+                    &larr; 返回主菜单
+                </button>
+
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">3. 双语知识库</h2>
+                
+                <!-- 搜索框 -->
+                <div class="relative mb-4">
+                    <input 
+                        type="search" 
+                        id="kb-search" 
+                        placeholder="在知识库中搜索 (Search)..." 
+                        class="w-full p-3 border border-gray-300 rounded-lg mb-4 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    />
+                    <button 
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden"
+                        id="clear-search"
+                        aria-label="清除搜索"
+                    >
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                </div>
+
+                <!-- 内部折叠内容 -->
+                <div id="kb-container" class="space-y-3">
+                    <!-- 二级标题: 核心术语 -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">核心术语 (Key Terms)</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel open-by-default p-4 bg-white rounded-b-lg space-y-2 shadow">
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>delegation of legislative power</span><span>立法权委托</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>intrastate transactions</span><span>州内交易</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>interstate commerce</span><span>州际贸易</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>Commerce Clause</span><span>商业条款</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>unconstitutional</span><span>违宪的</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>unfair competition</span><span>不正当竞争</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>code of fair competition</span><span>公平竞争法典</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>NIRA</span><span>国家产业复兴法</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>monopolistic practices</span><span>垄断行为</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>opinion of the Court</span><span>法庭（多数）意见</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>concurring opinion</span><span>协同意见</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>writ of certiorari</span><span>调卷令</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>indictment</span><span>起诉书</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>conviction</span><span>定罪</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>misdemeanor</span><span>轻罪</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>direct effects</span><span>直接影响</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>indirect effects</span><span>间接影响</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>federal power</span><span>联邦权力</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 二级标题: 关键短语 -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">关键短语 (Key Phrases)</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg space-y-2 shadow">
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>Live Poultry Code</span><span>活禽法典</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>current / flow of commerce</span><span>商业之流</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>to effectuate the policy</span><span>为实现/落实该政策</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>in or affecting...</span><span>在...之中或影响...</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>a roving commission</span><span>一项漫无边际的委托</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>unfettered discretion</span><span>不受约束的自由裁量权</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>close and substantial relation</span><span>密切且实质性的关系</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>delegation running riot</span><span>失控的委托</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>come to a permanent rest</span><span>已永久停驻</span></div>
+                            <div class="kb-item grid grid-cols-2 gap-x-4 p-1"><span>reserved to the States</span><span>保留给各州的（权力）</span></div>
+                        </div>
+                    </div>
+
+                    <!-- 二级标题: 典型句型 -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">典型句型 (Typical Sentences)</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg space-y-3 shadow">
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">Extraordinary conditions do not create or enlarge constitutional power.</span>
+                                <span>非常情况（紧急状态）不会创造或扩大宪法权力。</span>
+                            </div>
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">The Congress is not permitted to abdicate or to transfer to others the essential legislative functions...</span>
+                                <span>国会不得放弃或向他人转让其基本的立法职能...</span>
+                            </div>
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">...where the effect of intrastate transactions... is merely indirect, such transactions remain within the domain of state power.</span>
+                                <span>...当州内交易的影响仅为间接时，此类交易仍属于州权力的范畴。</span>
+                            </div>
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">The distinction between direct and indirect effects... must be recognized as a fundamental one...</span>
+                                <span>直接影响与间接影响之间的区别...必须被视为一项根本性区别...</span>
+                            </div>
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">We are of the opinion that the attempt... was not a valid exercise of federal power.</span>
+                                <span>我们认为...的企图并非对联邦权力的有效行使。</span>
+                            </div>
+                             <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">If the commerce clause were construed to reach all... the federal authority would embrace practically all the activities of the people...</span>
+                                <span>如果商业条款被解释为可以触及所有...联邦权力将几乎涵盖人民的所有活动...</span>
+                            </div>
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">(Cardozo) The delegated power... is not canalized within banks that keep it from overflowing.</span>
+                                <span>（卡多佐）被委托的权力...没有被约束在防止其泛滥的堤坝之内。</span>
+                            </div>
+                            <div class="kb-item flex flex-col p-1">
+                                <span class="font-medium">(Cardozo) This is delegation running riot.</span>
+                                <span>（卡多佐）这是失控的委托。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript 脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- 页面导航逻辑 ---
+            const pages = document.querySelectorAll('.page');
+            const mainMenu = document.getElementById('main-menu-page');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const backButtons = document.querySelectorAll('.back-btn');
+
+            // 显示特定页面的函数
+            function showPage(pageId) {
+                mainMenu.style.display = 'none'; // 隐藏主菜单
+                pages.forEach(p => { p.style.display = 'none'; }); // 隐藏所有内容页
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.style.display = 'block'; // 显示目标页面
+                }
+            }
+
+            // 显示主菜单的函数
+            function showMainMenu() {
+                pages.forEach(p => { p.style.display = 'none'; }); // 隐藏所有内容页
+                mainMenu.style.display = 'block'; // 显示主菜单
+            }
+
+            // 为导航按钮添加事件监听
+            navButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.dataset.target;
+                    showPage(targetId);
+                });
+            });
+
+            // 为所有返回按钮添加事件监听
+            backButtons.forEach(btn => {
+                btn.addEventListener('click', showMainMenu);
+            });
+
+
+            // --- 折叠面板逻辑 ---
+            const allToggleButtons = document.querySelectorAll('.toggle-btn');
+
+            allToggleButtons.forEach(button => {
+                const contentPanel = button.nextElementSibling;
+                const icon = button.querySelector('.toggle-icon');
+
+                // 检查并设置默认状态
+                if (contentPanel && contentPanel.classList.contains('open-by-default')) {
+                    contentPanel.classList.add('open');
+                    icon.textContent = '-';
+                    icon.classList.add('text-blue-600');
+                } else if (icon) {
+                    // 明确关闭所有非默认打开的面板
+                    if (contentPanel) contentPanel.classList.remove('open');
+                    icon.textContent = '+';
+                    icon.classList.add('text-gray-500');
+                }
+
+                // 添加点击事件监听器
+                button.addEventListener('click', () => {
+                    if (!contentPanel || !icon) return; // 健壮性检查
+                    // 切换显示状态
+                    if (contentPanel.classList.contains('open')) {
+                        contentPanel.classList.remove('open');
+                        icon.textContent = '+';
+                        icon.classList.remove('text-blue-600');
+                        icon.classList.add('text-gray-500');
+                    } else {
+                        contentPanel.classList.add('open');
+                        icon.textContent = '-';
+                        icon.classList.remove('text-gray-500');
+                        icon.classList.add('text-blue-600');
+                    }
+                });
+            });
+
+
+            // --- 知识库搜索逻辑 ---
+            const searchInput = document.getElementById('kb-search');
+            const clearSearchBtn = document.getElementById('clear-search');
+            // 确保只选中第三栏中的条目
+            const items = document.querySelectorAll('#kb-container .kb-item');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+
+                    // 显示/隐藏清除按钮
+                    if (clearSearchBtn) {
+                        if (searchTerm.length > 0) {
+                            clearSearchBtn.classList.remove('hidden');
+                        } else {
+                            clearSearchBtn.classList.add('hidden');
+                        }
+                    }
+
+                    // 过滤项目
+                    items.forEach(item => {
+                        const itemText = item.textContent.toLowerCase();
+                        if (itemText.includes(searchTerm)) {
+                            // 恢复原有的display样式
+                            if (item.classList.contains('grid')) {
+                                item.style.display = 'grid';
+                            } else if (item.classList.contains('flex')) {
+                                item.style.display = 'flex';
+                            } else {
+                                item.style.display = 'block';
+                            }
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // 搜索时自动打开所有知识库折叠面板，以便显示结果
+                    const kbToggles = document.querySelectorAll('#kb-container .toggle-btn');
+                    if (searchTerm.length > 0) {
+                        kbToggles.forEach(button => {
+                            const contentPanel = button.nextElementSibling;
+                            const icon = button.querySelector('.toggle-icon');
+                            if (contentPanel && icon && !contentPanel.classList.contains('open')) {
+                                contentPanel.classList.add('open');
+                                icon.textContent = '-';
+                                icon.classList.remove('text-gray-500');
+                                icon.classList.add('text-blue-600');
+                            }
+                        });
+                    }
+                });
+
+                // 清除搜索
+                if (clearSearchBtn) {
+                    clearSearchBtn.addEventListener('click', () => {
+                        searchInput.value = '';
+                        clearSearchBtn.classList.add('hidden');
+                        
+                        // 重新显示所有项目
+                        items.forEach(item => {
+                            if (item.classList.contains('grid')) {
+                                item.style.display = 'grid';
+                            } else if (item.classList.contains('flex')) {
+                                item.style.display = 'flex';
+                            } else {
+                                item.style.display = 'block';
+                            }
+                        });
+                    });
+                }
+            }
+
+
+            // --- 处理法律术语链接点击 ---
+            const legalLinks = document.querySelectorAll('a[data-search-term]');
+            legalLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const searchTerm = link.getAttribute('data-search-term');
+                    if (searchTerm) {
+                        window.open(`https://www.google.com/search?q=${encodeURIComponent(searchTerm)}`, '_blank', 'noopener noreferrer');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
