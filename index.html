@@ -70,7 +70,7 @@
 <body class="min-h-screen">
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
         <!-- 网页主标题 -->
-        <header class="bg-blue-800 p-6 text-white">
+        <header class="bg-blue-800 p-6 text-white" style="background-color: #0A0A0A;">
             <h1 class="text-3xl font-bold">案例分析与知识库 (导航版)</h1>
             <p class="text-xl mt-1 opacity-90">A.L.A. Schechter Poultry Corp. v. United States (1935)</p>
         </header>
@@ -80,26 +80,86 @@
             <!-- =================================== -->
             <!-- 页面 0: 主菜单 (标题画面) -->
             <!-- =================================== -->
-            <div id="main-menu-page" class="p-6 md:p-10">
-                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">请选择一个模块：</h2>
-                <div class="grid grid-cols-1 gap-5">
-                    <!-- 导航按钮 1 -->
-                    <button class="nav-btn w-full p-6 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-150 transform hover:-translate-y-1" data-target="page-1">
-                        <h3 class="text-xl font-semibold">1. 设计工具、方法与过程</h3>
-                        <p class="mt-1 opacity-90">查看本网页的构建思路和技术栈。</p>
-                    </button>
-                    
-                    <!-- 导航按钮 2 -->
-                    <button class="nav-btn w-full p-6 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-150 transform hover:-translate-y-1" data-target="page-2">
-                        <h3 class="text-xl font-semibold">2. 法庭意见书要素 (英文)</h3>
-                        <p class="mt-1 opacity-90">深入分析判决书的法律要素。</p>
-                    </button>
+            <div id="main-menu-page">
+                <!-- 上方信息栏 -->
+                <div class="bg-gray-200 p-3 text-center text-gray-800 font-medium">
+                    A.L.A. Schechter Poultry Corp. v. United States (1935) 案例分析
+                </div>
+                
+                <!-- 搜索框区域 -->
+                <div class="p-4 bg-white border-b border-gray-200">
+                    <form id="site-search-form" class="max-w-2xl mx-auto">
+                        <div class="relative">
+                            <input
+                                type="search"
+                                id="site-search-input"
+                                placeholder="搜索本网站中的所有内容..."
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm" />
+                            <button
+                                type="submit"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700 transition"
+                                style="background-color: #0A0A0A;">搜索
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- 搜索结果区域 -->
+                <div id="search-results" class="bg-white border-b border-gray-200 p-4 max-w-2xl mx-auto hidden">
+                    <h3 class="text-lg font-semibold mb-2">搜索结果:</h3>
+                    <ul id="results-list" class="space-y-2">
+                        <!-- 搜索结果将在这里动态生成 -->
+                    </ul>
+                </div>
+                
+                <!-- 主菜单内容 -->
+                <div class="p-6 md:p-10 mt-4" style="
+                    background-repeat: 'no-repeat';
+                    background-position: '50% 50%';
+                    background-size: 'cover';
+                    background-image: 'url(https://space-static.coze.site/coze_space/7566290912382632211/upload/Gemini_Generated_Image_2656gb2656gb2656_1024x1024.png?sign=1765030538-b9da7f3d87-0-3f15e46c56ce6502a25ac56055f2889f12f0a5231240d6d3710d6e7ce0f1b78b)';
+                    borderRadius: '15px'
+                ">
+                    <div class="grid grid-cols-1 gap-5">
+                        <!-- 导航按钮 1 -->
+                        <button class="nav-btn w-full p-6 bg-white text-black rounded-lg shadow-lg hover:bg-blue-50 transition duration-150 transform hover:-translate-y-1" 
+                            data-target="page-1"
+                            style="
+                                borderRadius: '15px';
+                                backgroundColor: '#FFFFFF';
+                                borderColor: '#D6DAE4';
+                                borderWidth: '5px'
+                            ">
+                            <h3 class="text-xl font-semibold" style="color: '#0A0A0A';">设计工具、方法与过程</h3>
+                            <p class="mt-1 opacity-90" style="color: '#0A0A0A';">查看本网页的构建思路和技术栈。</p>
+                        </button>
+                        
+                        <!-- 导航按钮 2 -->
+                        <button class="nav-btn w-full p-6 bg-white text-black rounded-lg shadow-lg hover:bg-blue-50 transition duration-150 transform hover:-translate-y-1" 
+                            data-target="page-2"
+                            style="
+                                borderRadius: '15px';
+                                backgroundColor: '#FFFFFF';
+                                borderColor: '#D6DAE4';
+                                borderWidth: '5px'
+                            ">
+                            <h3 class="text-xl font-semibold" style="color: '#0A0A0A';">法庭意见书要素 (英文)</h3>
+                            <p class="mt-1 opacity-90" style="color: '#0A0A0A';">深入分析判决书的法律要素。</p>
+                        </button>
 
-                    <!-- 导航按钮 3 -->
-                    <button class="nav-btn w-full p-6 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-150 transform hover:-translate-y-1" data-target="page-3">
-                        <h3 class="text-xl font-semibold">3. 双语知识库</h3>
-                        <p class="mt-1 opacity-90">搜索本案例相关的法律术语和句型。</p>
-                    </button>
+                        <!-- 导航按钮 3 -->
+                        <button class="nav-btn w-full p-6 bg-white text-black rounded-lg shadow-lg hover:bg-blue-50 transition duration-150 transform hover:-translate-y-1" 
+                            data-target="page-3"
+                            style="
+                                backgroundColor: '#FFFFFF';
+                                borderColor: '#D6DAE4';
+                                borderWidth: '5px';
+                                borderRadius: '15px'
+                            ">
+                            <h3 class="text-xl font-semibold" style="color: '#0A0A0A';">双语知识库</h3>
+                            <p class="mt-1 opacity-90" style="color: '#0A0A0A';">搜索本案例相关的法律术语和句型。</p>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -130,7 +190,7 @@
                             <ul>
                                 <li><strong>HTML5:</strong> 构建网页基本结构和语义。</li>
                                 <li><strong>Tailwind CSS:</strong> 快速构建美观、响应式的用户界面。</li>
-                                <li><strong>JavaScript:</strong> 实现页面导航、折叠面板和搜索功能。</li>
+                                <li><strong>JavaScript (React):</strong> 实现页面导航、折叠面板和搜索功能。</li>
                             </ul>
                             
                             <h4 class="font-semibold mt-3">设计方法</h4>
@@ -144,7 +204,7 @@
                             <ul>
                                 <li><strong>需求解析:</strong> 理解用户需要的导航逻辑和内容组织方式。</li>
                                 <li><strong>结构设计:</strong> 建立主菜单和内容页面的层次结构。</li>
-                                <li><strong>功能实现:</strong> 开发导航、折叠和搜索功能。</li>
+                                <li><strong>功能实现:</strong> 使用 React 框架开发导航、折叠和搜索功能。</li>
                                 <li><strong>内容整合:</strong> 将法律案例内容系统化地整合到网页中。</li>
                             </ul>
                         </div>
@@ -175,8 +235,20 @@
                         </button>
                         <div class="content-panel open-by-default p-4 bg-white rounded-b-lg prose max-w-none shadow">
                             <p><strong>A.L.A. Schechter Poultry Corporation et al. v. United States</strong>, 295 U.S. 495 (1935). Argued May 2-3, 1935. Decided May 27, 1935.</p>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <p><strong>阿拉·谢克特禽肉公司等诉美国案</strong>，295 U.S. 495 (1935)。庭审时间：1935年5月2-3日。判决时间：1935年5月27日。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- 二级标题: Procedural History -->
                     <div>
                         <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
@@ -187,8 +259,22 @@
                             <p>Defendants (Schechter Poultry Corp. et al.) were <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="indicted">indicted</a> in the U.S. District Court for the Eastern District of New York on 60 counts. After dismissals and acquittals, they were <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="convicted">convicted</a> on 18 counts for violating the "Live Poultry Code" and one count for <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="conspiracy">conspiracy</a> to commit such violations.</p>
                             <p class="mt-2">The <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="Circuit Court of Appeals">Circuit Court of Appeals</a> for the Second Circuit <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="sustained the conviction">sustained the conviction</a> on the conspiracy count and on 16 counts for code violations, but <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="reversed the conviction">reversed the conviction</a> on two counts which charged violations of minimum wage and maximum hour provisions (holding these were not within federal power).</p>
                             <p class="mt-2">Both the defendants (No. 854) and the government (No. 864, appealing the reversal of the wage/hour counts) petitioned the Supreme Court. The Supreme Court granted <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="writs of certiorari">writs of certiorari</a> for both cases.</p>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <p>被告（谢克特禽肉公司等）在美国纽约东区联邦地区法院被<LinkText term="indicted" text="起诉" />，涉及60项控罪。经过部分指控被撤销和部分被判无罪后，他们因违反《活禽法典》被<LinkText term="convicted" text="定罪" />18项罪名，并因<LinkText term="conspiracy" text="共谋" />实施此类违法行为被定罪1项罪名。</p>
+                                    <p className="mt-2">第二巡回上诉法院<LinkText term="Circuit Court of Appeals" text="维持" />了共谋罪和16项违反法典的定罪，但<LinkText term="reversed the conviction" text="推翻" />了两项指控违反最低工资和最高工时规定的定罪（认为这些不在联邦权力范围内）。</p>
+                                    <p className="mt-2">被告（第854号案件）和政府（第864号案件，对工资/工时指控的撤销提出上诉）均向最高法院提出上诉。最高法院对两起案件均授予了<LinkText term="writs of certiorari" text="调卷令" />。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- 二级标题: Statement of Facts -->
                     <div>
                         <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
@@ -206,8 +292,29 @@
                                     <li>Selling an "unfit chicken" and making false reports.</li>
                                 </ul>
                             </p>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <p>被告是纽约布鲁克林的屠宰场经营者（或称为"市场商人"）。纽约市是美国最大的活禽市场，其96%的禽肉来自其他州。</p>
+                                    <p className="mt-2">被告在禽肉完成其<LinkText term="interstate journey" text="州际运输" />后，从纽约和新泽西州的铁路终点站的代理商处购买活禽。然后他们用卡车将禽肉运到布鲁克林的屠宰场。</p>
+                                    <p className="mt-2">在屠宰场，他们屠宰禽肉并*在当地*销售给零售商和肉贩。这些销售不属于<LinkText term="interstate commerce" text="州际贸易" />。他们被定罪违反的《活禽法典》是纽约市都会区的<LinkText term="code of fair competition" text="公平竞争法典" />，由总统根据<LinkText term="National Industrial Recovery Act (NIRA)" text="《国家产业复兴法》(NIRA)" />第3条<LinkText term="promulgated" text="颁布" />。</p>
+                                    <p className="mt-2">被指控的具体违法行为包括：
+                                        <ul>
+                                            <li>违反员工最低工资（每小时50美分）和最高工时（每周40小时）的规定。</li>
+                                            <li>违反第七条第14款（即<LinkText term="straight killing provision schechter" text="直接屠宰条款" />），允许零售商"从特定鸡笼中挑选个别鸡只"，而非要求他们购买"任何半笼、一笼或多笼的全部鸡只"。</li>
+                                            <li>销售"不适合食用的鸡只"并提供虚假报告。</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- 二级标题: Core Legal Issues -->
                     <div>
                         <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
@@ -217,11 +324,26 @@
                         <div class="content-panel p-4 bg-white rounded-b-lg prose max-w-none shadow">
                             <ol>
                                 <li>Did Congress, through the NIRA, <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="unconstitutionally delegate its legislative power">unconstitutionally delegate its legislative power</a> to the President by authorizing him to approve "codes of fair competition" without establishing clear standards?</li>
-                                <li>Did the "Live Poultry Code" attempt to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="regulate intrastate transactions">regulate intrastate transactions</a> (like the defendants' local slaughtering and sales) that lay beyond the authority of Congress under the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="Commerce Clause">Commerce Clause</a>?</li>
-                                <li>(As raised by defendants, but not decided by the Court) Were the code's provisions in certain respects repugnant to the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="due process clause of the Fifth Amendment">due process clause of the Fifth Amendment</a>?</li>
+                                <li>Did the "Live Poultry Code" attempt to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="regulate intrastate transactions">regulate intrastate transactions</a> (like the defendants' local slaughtering and sales) that lay beyond the authority of Congress under the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="Commerce Clause">Commerce Clause</a>?</li><li>(As raised by defendants, but not decided by the Court) Were the code's provisions in certain respects repugnant to the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="due process clause of the Fifth Amendment">due process clause of the Fifth Amendment</a>?</li>
                             </ol>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <ol>
+                                        <li>国会通过《国家产业复兴法》授权总统批准"公平竞争法典"却未确立明确标准，是否构成<LinkText term="unconstitutionally delegate its legislative power" text="违宪地委托其立法权" />给总统？</li>
+                                        <li>《活禽法典》是否试图<LinkText term="regulate intrastate transactions" text="规制州内交易" />,（如被告的本地屠宰和销售活动），而这些活动超出了国会根据<LinkText term="Commerce Clause" text="商业条款" />享有的权限范围？</li>
+                                        <li>（被告提出但法院未裁决）该法典的某些规定是否在特定方面违反了<LinkText term="due process clause of the Fifth Amendment" text="第五修正案的正当程序条款" />？</li>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- 二级标题: Holding & Judgment -->
                     <div>
                         <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
@@ -236,8 +358,26 @@
                                     <li><strong>Yes.</strong> The code's provisions as applied to the defendants' business were an attempt to regulate <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="intrastate commerce">intrastate commerce</a> that only <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="indirectly affected interstate commerce">indirectly affected interstate commerce</a>, which is beyond the constitutional reach of Congress.</li>
                                 </ol>
                             </p>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <p>最高法院以<LinkText term="unanimous decision" text="一致意见" />推翻了巡回上诉法院的判决。法院裁定《活禽法典》无效，并撤销了原判。</p>
+                                    <p className="mt-2">法院在两个主要法律问题上支持了被告：
+                                        <ol>
+                                            <li><strong>是。</strong>《国家产业复兴法》将制定法典的权力授予总统，构成<LinkText term="unconstitutional delegation of legislative power" text="违宪的立法权委托" />。</li>
+                                            <li><strong>是。</strong>该法典适用于被告业务的规定，试图规制仅<LinkText term="indirectly affected interstate commerce" text="间接影响州际贸易" />的<LinkText term="intrastate commerce" text="州内贸易" />，这超出了国会根据宪法享有的权限范围。</li>
+                                        </ol>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- 二级标题: Reasoning (Opinion of the Court) -->
                     <div>
                         <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
@@ -252,6 +392,20 @@
                                 <li>This lack of standards gave the President <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="virtually unfettered discretion">"virtually unfettered discretion to make whatever laws he thinks may be needed or advisable."</a></li>
                                 <li>The Court held that "The Congress is not permitted to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="abdicate or to transfer essential legislative functions">"abdicate or to transfer to others the essential legislative functions</a> with which it is thus vested." This was not a valid delegation but an unconstitutional transfer of power.</li>
                             </ul>
+                            
+                            <!-- 相关先例 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">相关先例</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <h5 class="font-semibold mt-2">Panama Refining Co. v. Ryan (1935) - "巴拿马炼油公司诉瑞安案"</h5>
+                                    <p className="mt-1"><strong>案件事实：</strong>此案同样针对《国家工业复苏法》(NIRA)。该法的第9(c)条授权总统<strong>有权禁止</strong>跨州运输"热油"(Hot Oil)——即产量超过了州政府规定配额的石油。罗斯福总统随后发布行政命令来执行此禁令。巴拿马炼油公司对此提出挑战，认为国会将"是否要禁止"这一立法决策权完全授予了总统，而没有提供任何标准、规则或"可理解的原则"来指导总统何时应该（或不应该）发布禁令。</p>
+                                    <p className="mt-1"><strong>判决与意义：</strong>最高法院裁定该条款违宪。这是美国历史上最高法院<strong>首次</strong>明确以"授权禁止原则"为由，判定国会法案违宪。它确立了国会在授权行政部门时，必须提供清晰标准的原则，为几个月后的 <em>Schechter</em> 案判决奠定了直接基础。</p>
+                                </div>
+                            </div>
+                            
                             <h4 class="font-semibold mt-3">II. Scope of the Commerce Clause</h4>
                             <ul>
                                 <li>The Court first determined that the defendants' transactions were not <strong><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="in interstate commerce">"in interstate commerce"</a></strong>. The <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="flow of commerce had ceased">"flow of commerce had ceased"</a> when the poultry arrived at the Brooklyn slaughterhouses. "The poultry had come to a permanent rest within the state."</li>
@@ -261,8 +415,79 @@
                                 <li>If such *indirect* effects were sufficient, "it would seem that a similar control might be exerted over other elements of cost... rents, advertising, methods of doing business... All the processes of production and distribution... could likewise be controlled."</li>
                                 <li>The Court concluded that accepting this argument "would be to destroy the distinction... between commerce 'among the several States' and the <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="internal concerns of a state">internal concerns of a state</a>."</li>
                             </ul>
+                            
+                            <!-- 相关先例 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">相关先例</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <h5 class="font-semibold mt-2">A. 限制联邦权力的先例（区分"生产"与"商业"）</h5>
+                                    
+                                    <div class="mt-2">
+                                        <h6 class="font-semibold">United States v. E. C. Knight Co. (1895) - "合众国诉 E. C. 奈特公司案" (糖业托拉斯案)</h6>
+                                        <p className="mt-1"><strong>案件事实：</strong>美国糖业精炼公司 (American Sugar Refining Co.) 通过收购包括 E. C. 奈特公司在内的多家费城炼糖厂，使其控制了全美 98% 的食糖精炼业务，形成了事实上的垄断。美国政府依据1890年的《谢尔曼反托拉斯法》对其提起诉讼，认为该垄断"限制了州际商业"。</p>
+                                        <p className="mt-1"><strong>判决与意义：</strong>最高法院裁定政府败诉。法院做出了一个关键区分：<strong>"生产制造" (Manufacturing) 不等于"商业" (Commerce)</strong>。法院认为，炼糖是一种发生在州内的"生产"活动，而《反托拉斯法》基于"商业条款"，只能监管"商业"（即跨州的贸易、运输和销售）。该公司对生产的垄断，仅仅"间接"(indirectly) 影响了州际商业，因此国会无权监管。</p>
+                                    </div>
+                                    
+                                    <div class="mt-2">
+                                        <h6 class="font-semibold">Hammer v. Dagenhart (1918) - "哈默诉达根哈特案" (童工案)</h6>
+                                        <p className="mt-1"><strong>案件事实：</strong>国会通过了《基廷-欧文法案》(Keating-Owen Act)，该法案禁止将<strong>使用童工制造的商品</strong>运往其他州（即禁止其进入州际商业）。北卡罗来纳州一家棉纺厂的工人罗兰·达根哈特（Roland Dagenhart）代表他两个未成年的儿子（均为童工）提起诉讼，要求禁止执行该法案。</p>
+                                        <p className="mt-1"><strong>判决与意义：</strong>最高法院裁定该法案违宪。法院重申了 <em>E. C. Knight</em> 案的逻辑，认为"生产制造"（包括劳工标准）是纯粹的地方事务，受各州"警察权"（即管理本州健康、安全和道德的权力）管辖，而不是联邦"商业条款"的管辖范围。法院认为，国会试图利用其对州际运输的控制权，来间接达到监管州内生产条件的目的，这是越权行为。</p>
+                                    </div>
+                                    
+                                    <div class="mt-2">
+                                        <h6 class="font-semibold">Kidd v. Pearson (1888)</h6>
+                                        <p className="mt-1"><strong>案件事实：</strong>爱荷华州通过了一项法律，禁止在该州境内制造任何酒精饮料，<strong>即使这些酒是专门为了出口到其他州而生产的</strong>。一家酿酒厂 (Kidd) 辩称，该州法律干涉了州际商业，因为其产品专门用于州际销售。</p>
+                                        <p className="mt-1"><strong>判决与意义：</strong>最高法院维持了爱荷华州法律的有效性。法院明确指出，"生产制造"在"商业"开始之前就已经完成了。因此，爱荷华州利用其"警察权"来禁止生产（它认为有害的）酒精饮料，这完全是州内事务，并没有侵犯国会对州际商业的监管权。</p>
+                                    </div>
+                                    
+                                    <h5 class="font-semibold mt-2">B. 支持联邦权力的先例（法院在 <em>Schechter</em> 案中试图"排除适用"的先例）</h5>
+                                    
+                                    <div class="mt-2">
+                                        <h6 class="font-semibold">Swift & Co. v. United States (1905) - "斯威夫特公司诉合众国案" (牛肉托拉斯案)</h6>
+                                        <p className="mt-1"><strong>案件事实：</strong>政府指控包括斯威夫特公司在内的几大肉类包装商（被称为"牛肉托拉斯"）利用其对屠宰场和运输的控制，合谋操纵全美牲畜和肉类的价格，违反了《谢尔曼反托拉斯法》。这些公司辩称，他们在芝加哥等地的屠宰场进行的业务是"地方性"活动，不属于州际商业。</p>
+                                        <p className="mt-1"><strong>判决与意义：</strong>最高法院<strong>裁定政府胜诉</strong>。霍姆斯大法官在此案中首次提出了<strong>"商业流通" (Stream of Commerce)</strong> 理论。他认为，牲畜从一个州运到芝加哥的屠宰场，在那里被屠宰、加工，然后再将肉品运往其他州销售——这个过程虽然在屠宰场有"暂停"，但它本质上是一个<strong>连续不断的"州际商业流通"</strong>。因此，国会有权监管这个"流通"中的任何一个环节，包括看似地方性的屠宰场。</p>
+                                    </div>
+                                    
+                                    <div class="mt-2">
+                                        <h6 class="font-semibold">Stafford v. Wallace (1922)</h6>
+                                        <p className="mt-1"><strong>案件事实：</strong>国会通过了《包装商和屠宰场法案》(Packers and Stockyards Act)，旨在严格监管大型屠宰场和牲畜交易市场的商业行为（如价格欺诈、垄断等）。交易商斯塔福德 (Stafford) 提起诉讼，辩称他在屠宰场的交易活动完全在州内发生，国会无权监管。</p>
+                                        <p className="mt-1"><strong>判决与意义：</strong>最高法院<strong>再次裁定政府胜诉</strong>。判决（由塔夫脱首席大法官撰写）强力重申并扩展了 <em>Swift</em> 案的"商业流通"理论。判决将屠宰场生动地比喻为州际商业"<strong>流通的咽喉</strong>"(a throat through which the current flows)。法院认为，这些地方性交易是整个州际流通中不可或缺的一部分，国会有权监管它们，以确保"流通"的顺畅和公平。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <h4 class="font-semibold">一、违宪的立法权委托</h4>
+                                    <ul>
+                                        <li>休斯首席大法官代表法院写道，《国家产业复兴法》第3条是<LinkText term="without precedent" text="史无前例的" />。它<LinkText term="supplies no standards" text="没有为任何行业、产业或活动提供标准" />。</li>
+                                        <li>该法案并未"规定行为规则"，而是"授权制定法典来规定这些规则"。该法案第1条中的"政策声明"被认为过于宽泛，无法作为有意义的标准。</li>
+                                        <li>这种标准缺失给予总统<LinkText term="virtually unfettered discretion" text="几乎不受限制的自由裁量权，可以制定他认为可能需要或适当的任何法律" />。</li>
+                                        <li>法院认为："国会不得<LinkText term="abdicate or to transfer essential legislative functions" text="放弃或向他人转让其被赋予的基本立法职能" />。"这不是有效的委托，而是违宪的权力转移。</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mt-3">二、商业条款的适用范围</h4>
+                                    <ul>
+                                        <li>法院首先认定，被告的交易不属于<strong><LinkText term="in interstate commerce" text="州际贸易" /></strong>。当禽肉到达布鲁克林屠宰场时，<LinkText term="flow of commerce had ceased" text="商业流通已经停止" />。"禽肉已在该州内永久停留。"</li>
+                                        <li>法院随后询问，这些纯粹的州内活动是否<strong><LinkText term="directly affected interstate commerce" text="直接影响州际贸易" /></strong>。法院认为它们没有。</li>
+                                        <li>法院再次强调"<LinkText term="direct and indirect effects commerce clause" text="直接影响与间接影响" />之间必要且已确立的区别"。被告的员工工资、工时和当地销售惯例"与州际贸易没有直接关系"。</li>
+                                        <li>政府关于低工资/长工时影响当地价格，进而影响对其他州禽肉需求的论点被驳回，认为是<LinkText term="argument proves too much" text="过犹不及" />。</li>
+                                        <li>如果这种*间接*影响就足够的话，"似乎可以对其他成本要素...租金、广告、经营方法...所有生产和分销过程...施加类似的控制"。</li>
+                                        <li>法院得出结论，接受这一论点"将破坏...'各州之间的商业'与<LinkText term="internal concerns of a state" text="州内部事务" />之间的区别"。</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- 二级标题: Concurring Opinion (Cardozo, J.) -->
                     <div>
                         <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
@@ -276,6 +501,22 @@
                                 <li>He famously stated this was not just a delegation to stop "unfair" practices, but to regulate all "ordinances... desirable or helpful for the well-being or prosperity of the industry." He concluded: <strong><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="delegation running riot">"This is delegation running riot."</a></strong></li>
                                 <li>On the Commerce Clause, he agreed the connection was too remote. "The law is not indifferent to <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="considerations of degree">"considerations of degree..."</a> To find immediacy or directness here is to find it almost everywhere. If centripetal forces are to be isolated... there will be an end to our <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold" data-search-term="federal system">federal system</a>."</li>
                             </ul>
+                            
+                            <!-- 中文翻译子折叠面板 -->
+                            <div>
+                                <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg shadow-sm transition duration-150 mt-3">
+                                    <h4 class="text-md font-semibold text-gray-700">中文翻译</h4>
+                                    <span class="toggle-icon text-xl font-semibold"></span>
+                                </button>
+                                <div class="content-panel p-3 bg-gray-50 rounded-b-lg prose max-w-none shadow-sm">
+                                    <ul>
+                                        <li>卡多佐大法官（斯通大法官加入）单独撰写了一份<LinkText term="concurrence" text="协同意见" />，以强调他的同意，特别是在权力委托问题上。</li>
+                                        <li>他认为，这种权力委托比同年早些时候在"巴拿马炼油公司诉瑞安案"中被推翻的委托更糟糕。他写道，这里委托的权力<LinkText term="not canalized within banks that keep it from overflowing" text="没有被约束在防止其泛滥的堤坝之内。它是无限制且随意的。" /></li>
+                                        <li>他著名地指出，这不仅仅是委托权力来制止"不公平"做法，而是要规制所有"为行业福祉或繁荣所需要或有益的条例"。他总结道：<strong><LinkText term="delegation running riot" text="这是失控的委托。" /></strong></li>
+                                        <li>关于商业条款，他同意联系过于遥远。"法律并非不考虑<LinkText term="considerations of degree" text="程度因素..." />如果在此处能找到直接性，那么几乎在任何地方都能找到。如果要孤立向心力...我们的<LinkText term="federal system" text="联邦体制" />将不复存在。"</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -400,6 +641,108 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- 二级标题: 核心术语测验 -->
+                    <div>
+                        <button class="toggle-btn w-full flex justify-between items-center p-3 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-sm transition duration-150">
+                            <h3 class="text-lg font-semibold text-gray-800">核心术语测验 (Quiz)</h3>
+                            <span class="toggle-icon text-2xl font-semibold"></span>
+                        </button>
+                        <div class="content-panel p-4 bg-white rounded-b-lg space-y-3 shadow">
+                            <p class="text-sm text-gray-600 mb-2">测试您对法律术语的掌握程度！完成以下10道选择题。</p>
+                            
+                            <!-- 测验组件 -->
+                            <div id="quiz-container" class="bg-white rounded-lg p-6 shadow-md">
+                                <div class="mb-4 flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">问题 <span id="current-question-number">1</span>/10</span>
+                                    <span class="text-sm text-gray-500">得分: <span id="quiz-score">0</span></span>
+                                </div>
+                                
+                                <h3 class="text-lg font-semibold mb-6" id="quiz-question">哪个术语表示'立法权委托'?</h3>
+                                
+                                <div class="space-y-3 mb-6" id="quiz-options">
+                                    <div 
+                                        class="quiz-option p-3 rounded-lg border-2 cursor-pointer transition duration-200 border-gray-300 hover:bg-gray-50"
+                                        data-option-id="a"
+                                    >
+                                        <div class="flex items-center">
+                                            <div class="w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0"></div>
+                                            <span>delegation of legislative power</span>
+                                        </div>
+                                    </div>
+                                    <div 
+                                        class="quiz-option p-3 rounded-lg border-2 cursor-pointer transition duration-200 border-gray-300 hover:bg-gray-50"
+                                        data-option-id="b"
+                                    >
+                                        <div class="flex items-center">
+                                            <div class="w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0"></div>
+                                            <span>intrastate transactions</span>
+                                        </div>
+                                    </div>
+                                    <div 
+                                        class="quiz-option p-3 rounded-lg border-2 cursor-pointer transition duration-200 border-gray-300 hover:bg-gray-50"
+                                        data-option-id="c"
+                                    >
+                                        <div class="flex items-center">
+                                            <div class="w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0"></div>
+                                            <span>interstate commerce</span>
+                                        </div>
+                                    </div>
+                                    <div 
+                                        class="quiz-option p-3 rounded-lg border-2 cursor-pointer transition duration-200 border-gray-300 hover:bg-gray-50"
+                                        data-option-id="d"
+                                    >
+                                        <div class="flex items-center">
+                                            <div class="w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0"></div>
+                                            <span>Commerce Clause</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex space-x-3">
+                                    <button 
+                                        id="submit-answer-btn"
+                                        class="flex-1 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
+                                    >
+                                        提交答案
+                                    </button>
+                                    <button 
+                                        id="next-question-btn"
+                                        class="flex-1 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200 hidden"
+                                    >
+                                        下一题
+                                    </button>
+                                </div>
+                                
+                                <div id="feedback-container" class="mt-4 p-3 rounded-lg hidden"></div>
+                            </div>
+                            
+                            <!-- 测验结果 -->
+                            <div id="quiz-result" class="bg-white rounded-lg p-6 shadow-md hidden">
+                                <h3 class="text-xl font-bold mb-4 text-center">测验结果</h3>
+                                <div class="text-center mb-6">
+                                    <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-blue-100 text-blue-600 text-3xl font-bold mb-2">
+                                        <span id="final-score">0</span>
+                                    </div>
+                                    <p class="text-lg">得分: <span id="final-score-text">0</span>/10</p>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <h4 class="font-semibold mb-2">答题情况:</h4>
+                                    <div class="grid grid-cols-2 md:grid-cols-5 gap-2">
+                                        <!-- 答题情况将动态生成 -->
+                                    </div>
+                                </div>
+                                
+                                <button 
+                                    id="restart-quiz-btn"
+                                    class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
+                                >
+                                    重新开始测验
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -443,7 +786,6 @@
                 btn.addEventListener('click', showMainMenu);
             });
 
-
             // --- 折叠面板逻辑 ---
             const allToggleButtons = document.querySelectorAll('.toggle-btn');
 
@@ -481,15 +823,100 @@
                 });
             });
 
+            // --- 全局搜索逻辑 ---
+            const searchForm = document.getElementById('site-search-form');
+            const searchInput = document.getElementById('site-search-input');
+            const searchResults = document.getElementById('search-results');
+            const resultsList = document.getElementById('results-list');
+
+            // 网站内容数据
+            const siteContent = [
+                {
+                    title: "设计工具、方法与过程",
+                    path: "page-1",
+                    content: "本网页使用 HTML5、Tailwind CSS 和 JavaScript (React) 构建，设计者：翟方毅 230608005"
+                }, 
+                {
+                    title: "法庭意见书要素",
+                    path: "page-2",
+                    content: "A.L.A. Schechter Poultry Corporation et al. v. United States, 295 U.S. 495 (1935) 涉及立法权委托和商业条款的经典案例"
+                }, 
+                {
+                    title: "双语知识库",
+                    path: "page-3",
+                    content: "包含核心术语、关键短语和典型句型的双语对照，如 delegation of legislative power 立法权委托，interstate commerce 州际贸易等"
+                }
+            ];
+
+            if (searchForm && searchInput && searchResults && resultsList) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const searchTerm = searchInput.value.trim().toLowerCase();
+                    if (!searchTerm) return;
+                    
+                    // 过滤搜索结果
+                    const results = siteContent.filter(
+                        item => item.title.toLowerCase().includes(searchTerm) || 
+                                item.content.toLowerCase().includes(searchTerm)
+                    );
+                    
+                    // 显示搜索结果
+                    searchResults.classList.remove('hidden');
+                    
+                    // 清空并填充结果列表
+                    resultsList.innerHTML = '';
+                    
+                    if (results.length > 0) {
+                        results.forEach((result, index) => {
+                            const li = document.createElement('li');
+                            li.innerHTML = `
+                                <button 
+                                    class="text-left w-full p-2 hover:bg-gray-100 rounded transition flex justify-between items-center"
+                                    data-path="${result.path}"
+                                >
+                                    <span>${result.title}</span>
+                                    <span class="text-sm text-gray-500">${result.path}</span>
+                                </button>
+                            `;
+                            resultsList.appendChild(li);
+                        });
+                        
+                        // 添加结果项点击事件
+                        const resultButtons = resultsList.querySelectorAll('button');
+                        resultButtons.forEach(button => {
+                            button.addEventListener('click', function() {
+                                const path = this.getAttribute('data-path');
+                                if (path) {
+                                    showPage(path);
+                                    searchResults.classList.add('hidden');
+                                    searchInput.value = '';
+                                }
+                            });
+                        });
+                        
+                        // 如果只有一个结果，自动跳转
+                        if (results.length === 1) {
+                            setTimeout(() => {
+                                showPage(results[0].path);
+                                searchResults.classList.add('hidden');
+                                searchInput.value = '';
+                            }, 500);
+                        }
+                    } else {
+                        resultsList.innerHTML = '<li class="text-gray-500 text-center p-4">未找到相关结果</li>';
+                    }
+                });
+            }
 
             // --- 知识库搜索逻辑 ---
-            const searchInput = document.getElementById('kb-search');
+            const kbSearchInput = document.getElementById('kb-search');
             const clearSearchBtn = document.getElementById('clear-search');
             // 确保只选中第三栏中的条目
-            const items = document.querySelectorAll('#kb-container .kb-item');
+            const kbItems = document.querySelectorAll('#kb-container .kb-item');
 
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
+            if (kbSearchInput) {
+                kbSearchInput.addEventListener('input', (e) => {
                     const searchTerm = e.target.value.toLowerCase();
 
                     // 显示/隐藏清除按钮
@@ -502,7 +929,7 @@
                     }
 
                     // 过滤项目
-                    items.forEach(item => {
+                    kbItems.forEach(item => {
                         const itemText = item.textContent.toLowerCase();
                         if (itemText.includes(searchTerm)) {
                             // 恢复原有的display样式
@@ -537,11 +964,11 @@
                 // 清除搜索
                 if (clearSearchBtn) {
                     clearSearchBtn.addEventListener('click', () => {
-                        searchInput.value = '';
+                        kbSearchInput.value = '';
                         clearSearchBtn.classList.add('hidden');
                         
                         // 重新显示所有项目
-                        items.forEach(item => {
+                        kbItems.forEach(item => {
                             if (item.classList.contains('grid')) {
                                 item.style.display = 'grid';
                             } else if (item.classList.contains('flex')) {
@@ -554,7 +981,6 @@
                 }
             }
 
-
             // --- 处理法律术语链接点击 ---
             const legalLinks = document.querySelectorAll('a[data-search-term]');
             legalLinks.forEach(link => {
@@ -566,7 +992,381 @@
                     }
                 });
             });
+            
+            // --- 测验功能 ---
+            const quizQuestions = [
+                {
+                    id: 1,
+                    question: "哪个术语表示'立法权委托'?",
+                    options: [
+                        { id: "a", text: "delegation of legislative power", correct: true },
+                        { id: "b", text: "intrastate transactions", correct: false },
+                        { id: "c", text: "interstate commerce", correct: false },
+                        { id: "d", text: "Commerce Clause", correct: false }
+                    ]
+                },
+                {
+                    id: 2,
+                    question: "'州际贸易'对应的英文术语是?",
+                    options: [
+                        { id: "a", text: "unconstitutional", correct: false },
+                        { id: "b", text: "interstate commerce", correct: true },
+                        { id: "c", text: "monopolistic practices", correct: false },
+                        { id: "d", text: "federal power", correct: false }
+                    ]
+                },
+                {
+                    id: 3,
+                    question: "'Commerce Clause'指的是美国宪法中的哪个条款?",
+                    options: [
+                        { id: "a", text: "正当程序条款", correct: false },
+                        { id: "b", text: "平等保护条款", correct: false },
+                        { id: "c", text: "商业条款", correct: true },
+                        { id: "d", text: "言论自由条款", correct: false }
+                    ]
+                },
+                {
+                    id: 4,
+                    question: "'违宪的'对应的英文单词是?",
+                    options: [
+                        { id: "a", text: "unconstitutional", correct: true },
+                        { id: "b", text: "unfair competition", correct: false },
+                        { id: "c", text: "monopolistic practices", correct: false },
+                        { id: "d", text: "code of fair competition", correct: false }
+                    ]
+                },
+                {
+                    id: 5,
+                    question: "'NIRA'的中文全称是什么?",
+                    options: [
+                        { id: "a", text: "国家劳工关系法", correct: false },
+                        { id: "b", text: "国家产业复兴法", correct: true },
+                        { id: "c", text: "公平劳动标准法", correct: false },
+                        { id: "d", text: "社会保障法", correct: false }
+                    ]
+                },
+                {
+                    id: 6,
+                    question: "'法庭（多数）意见'的英文表达是?",
+                    options: [
+                        { id: "a", text: "concurring opinion", correct: false },
+                        { id: "b", text: "dissenting opinion", correct: false },
+                        { id: "c", text: "opinion of the Court", correct: true },
+                        { id: "d", text: "per curiam opinion", correct: false }
+                    ]
+                },
+                {
+                    id: 7,
+                    question: "'调卷令'对应的英文术语是?",
+                    options: [
+                        { id: "a", text: "writ of certiorari", correct: true },
+                        { id: "b", text: "indictment", correct: false },
+                        { id: "c", text: "conviction", correct: false },
+                        { id: "d", text: "misdemeanor", correct: false }
+                    ]
+                },
+                {
+                    id: 8,
+                    question: "'协同意见'的英文表达是?",
+                    options: [
+                        { id: "a", text: "opinion of the Court", correct: false },
+                        { id: "b", text: "concurring opinion", correct: true },
+                        { id: "c", text: "dissenting opinion", correct: false },
+                        { id: "d", text: "plurality opinion", correct: false }
+                    ]
+                },
+                {
+                    id: 9,
+                    question: "'垄断行为'对应的英文术语是?",
+                    options: [
+                        { id: "a", text: "unfair competition", correct: false },
+                        { id: "b", text: "code of fair competition", correct: false },
+                        { id: "c", text: "monopolistic practices", correct: true },
+                        { id: "d", text: "delegation of legislative power", correct: false }
+                    ]
+                },
+                {
+                    id: 10,
+                    question: "'公平竞争法典'的英文表达是?",
+                    options: [
+                        { id: "a", text: "code of fair competition", correct: true },
+                        { id: "b", text: "unfair competition", correct: false },
+                        { id: "c", text: "monopolistic practices", correct: false },
+                        { id: "d", text: "Live Poultry Code", correct: false }
+                    ]
+                }
+            ];
+
+            // 初始化测验变量
+            let currentQuestionIndex = 0;
+            let selectedOption = null;
+            let isAnswered = false;
+            let score = 0;
+            let showResult = false;
+            let answers = [];
+
+            // 获取DOM元素
+            const quizContainer = document.getElementById('quiz-container');
+            const quizResultContainer = document.getElementById('quiz-result');
+            const currentQuestionNumberEl = document.getElementById('current-question-number');
+            const quizScoreEl = document.getElementById('quiz-score');
+            const quizQuestionEl = document.getElementById('quiz-question');
+            const quizOptionsEl = document.getElementById('quiz-options');
+            const submitAnswerBtn = document.getElementById('submit-answer-btn');
+            const nextQuestionBtn = document.getElementById('next-question-btn');
+            const feedbackContainer = document.getElementById('feedback-container');
+            const finalScoreEl = document.getElementById('final-score');
+            const finalScoreTextEl = document.getElementById('final-score-text');
+            const restartQuizBtn = document.getElementById('restart-quiz-btn');
+
+            // 显示当前问题
+            function displayQuestion() {
+                const currentQuestion = quizQuestions[currentQuestionIndex];
+                
+                if (currentQuestionNumberEl) currentQuestionNumberEl.textContent = (currentQuestionIndex + 1).toString();
+                if (quizQuestionEl) quizQuestionEl.textContent = currentQuestion.question;
+                
+                // 清空选项并添加新选项
+                if (quizOptionsEl) {
+                    quizOptionsEl.innerHTML = '';
+                    
+                    currentQuestion.options.forEach(option => {
+                        const optionEl = document.createElement('div');
+                        optionEl.className = 'quiz-option p-3 rounded-lg border-2 cursor-pointer transition duration-200 border-gray-300 hover:bg-gray-50';
+                        optionEl.setAttribute('data-option-id', option.id);
+                        optionEl.innerHTML = `
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0"></div>
+                                <span>${option.text}</span>
+                            </div>
+                        `;
+                        
+                        optionEl.addEventListener('click', function() {
+                            handleOptionSelect(option.id);
+                        });
+                        
+                        quizOptionsEl.appendChild(optionEl);
+                    });
+                }
+                
+                // 重置状态
+                selectedOption = null;
+                isAnswered = false;
+                
+                if (submitAnswerBtn) submitAnswerBtn.disabled = false;
+                if (submitAnswerBtn) submitAnswerBtn.classList.remove('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
+                if (submitAnswerBtn) submitAnswerBtn.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700');
+                if (nextQuestionBtn) nextQuestionBtn.classList.add('hidden');
+                if (feedbackContainer) feedbackContainer.classList.add('hidden');
+                
+                // 重置选项样式
+                const optionElements = document.querySelectorAll('.quiz-option');
+                optionElements.forEach(el => {
+                    el.classList.remove('border-blue-500', 'bg-blue-50', 'border-green-500', 'bg-green-50', 'border-red-500', 'bg-red-50');
+                    el.classList.add('border-gray-300', 'hover:bg-gray-50');
+                    
+                    const radioCircle = el.querySelector('.w-5.h-5.rounded-full');
+                    if (radioCircle) {
+                        radioCircle.className = 'w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0';
+                        radioCircle.innerHTML = '';
+                    }
+                });
+            }
+
+            // 处理选项选择
+            function handleOptionSelect(optionId) {
+                if (isAnswered) return;
+                
+                selectedOption = optionId;
+                
+                // 更新选项样式
+                const optionElements = document.querySelectorAll('.quiz-option');
+                optionElements.forEach(el => {
+                    const id = el.getAttribute('data-option-id');
+                    
+                    if (id === optionId) {
+                        el.classList.remove('border-gray-300', 'hover:bg-gray-50');
+                        el.classList.add('border-blue-500', 'bg-blue-50');
+                        
+                        const radioCircle = el.querySelector('.w-5.h-5.rounded-full');
+                        if (radioCircle) {
+                            radioCircle.className = 'w-5 h-5 rounded-full bg-blue-500 border-blue-500 mr-3 flex-shrink-0 flex items-center justify-center';
+                            radioCircle.innerHTML = '<div class="w-3 h-3 rounded-full bg-white"></div>';
+                        }
+                    } else {
+                        el.classList.remove('border-blue-500', 'bg-blue-50');
+                        el.classList.add('border-gray-300', 'hover:bg-gray-50');
+                        
+                        const radioCircle = el.querySelector('.w-5.h-5.rounded-full');
+                        if (radioCircle) {
+                            radioCircle.className = 'w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0';
+                            radioCircle.innerHTML = '';
+                        }
+                    }
+                });
+            }
+
+            // 提交答案
+            function submitAnswer() {
+                if (!selectedOption || isAnswered) return;
+                
+                const currentQuestion = quizQuestions[currentQuestionIndex];
+                const isCorrect = currentQuestion.options.find(opt => opt.id === selectedOption)?.correct || false;
+                
+                isAnswered = true;
+                answers.push({questionId: currentQuestion.id, correct: isCorrect});
+                
+                if (isCorrect) {
+                    score++;
+                    if (quizScoreEl) quizScoreEl.textContent = score.toString();
+                }
+                
+                // 显示正确/错误反馈
+                if (feedbackContainer) {
+                    feedbackContainer.className = `mt-4 p-3 rounded-lg ${isCorrect ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`;
+                    feedbackContainer.textContent = isCorrect ? '回答正确！' : `回答错误。正确答案是: ${currentQuestion.options.find(opt => opt.correct)?.text}`;
+                    feedbackContainer.classList.remove('hidden');
+                }
+                
+                // 更新选项样式以显示正确/错误
+                const optionElements = document.querySelectorAll('.quiz-option');
+                optionElements.forEach(el => {
+                    const id = el.getAttribute('data-option-id');
+                    const option = currentQuestion.options.find(opt => opt.id === id);
+                    
+                    if (option?.correct) {
+                        el.classList.remove('border-blue-500', 'bg-blue-50', 'border-gray-300', 'hover:bg-gray-50');
+                        el.classList.add('border-green-500', 'bg-green-50');
+                        
+                        const radioCircle = el.querySelector('.w-5.h-5.rounded-full');
+                        if (radioCircle) {
+                            radioCircle.className = 'w-5 h-5 rounded-full bg-green-500 border-green-500 mr-3 flex-shrink-0 flex items-center justify-center';
+                            radioCircle.innerHTML = '<div class="w-3 h-3 rounded-full bg-white"></div>';
+                        }
+                    } else if (id === selectedOption && !option?.correct) {
+                        el.classList.remove('border-blue-500', 'bg-blue-50', 'border-gray-300', 'hover:bg-gray-50');
+                        el.classList.add('border-red-500', 'bg-red-50');
+                        
+                        const radioCircle = el.querySelector('.w-5.h-5.rounded-full');
+                        if (radioCircle) {
+                            radioCircle.className = 'w-5 h-5 rounded-full bg-red-500 border-red-500 mr-3 flex-shrink-0 flex items-center justify-center';
+                            radioCircle.innerHTML = '<div class="w-3 h-3 rounded-full bg-white"></div>';
+                        }
+                    } else {
+                        el.classList.remove('border-blue-500', 'bg-blue-50');
+                        el.classList.add('border-gray-300');
+                        
+                        const radioCircle = el.querySelector('.w-5.h-5.rounded-full');
+                        if (radioCircle) {
+                            radioCircle.className = 'w-5 h-5 rounded-full border border-gray-300 mr-3 flex-shrink-0';
+                            radioCircle.innerHTML = '';
+                        }
+                    }
+                });
+                
+                // 禁用提交按钮，显示下一题按钮
+                if (submitAnswerBtn) {
+                    submitAnswerBtn.disabled = true;
+                    submitAnswerBtn.classList.remove('bg-blue-600', 'text-white', 'hover:bg-blue-700');
+                    submitAnswerBtn.classList.add('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
+                }
+                
+                if (nextQuestionBtn) {
+                    nextQuestionBtn.textContent = currentQuestionIndex < quizQuestions.length - 1 ? '下一题' : '查看结果';
+                    nextQuestionBtn.classList.remove('hidden');
+                }
+            }
+
+            // 下一题或查看结果
+            function nextQuestion() {
+                if (currentQuestionIndex < quizQuestions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion();
+                } else {
+                    showQuizResult();
+                }
+            }
+
+            // 显示测验结果
+            function showQuizResult() {
+                showResult = true;
+                
+                // 隐藏测验容器，显示结果容器
+                if (quizContainer) quizContainer.classList.add('hidden');
+                if (quizResultContainer) quizResultContainer.classList.remove('hidden');
+                
+                // 更新分数
+                if (finalScoreEl) finalScoreEl.textContent = score.toString();
+                if (finalScoreTextEl) finalScoreTextEl.textContent = score.toString();
+                
+                // 显示答题情况
+                const answersContainer = document.querySelector('#quiz-result .grid');
+                if (answersContainer) {
+                    answersContainer.innerHTML = '';
+                    
+                    answers.forEach((ans, index) => {
+                        const answerCircle = document.createElement('div');
+                        answerCircle.className = `w-8 h-8 rounded-full flex items-center justify-center ${
+                            ans.correct ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
+                        }`;
+                        answerCircle.textContent = ans.correct ? '✓' : '✗';
+                        answersContainer.appendChild(answerCircle);
+                    });
+                }
+            }
+
+            // 重新开始测验
+            function restartQuiz() {
+                currentQuestionIndex = 0;
+                selectedOption = null;
+                isAnswered = false;
+                score = 0;
+                showResult = false;
+                answers = [];
+                
+                // 更新分数显示
+                if (quizScoreEl) quizScoreEl.textContent = '0';
+                
+                // 隐藏结果容器，显示测验容器
+                if (quizResultContainer) quizResultContainer.classList.add('hidden');
+                if (quizContainer) quizContainer.classList.remove('hidden');
+                
+                // 显示第一个问题
+                displayQuestion();
+            }
+
+            // 添加事件监听器
+            if (submitAnswerBtn) {
+                submitAnswerBtn.addEventListener('click', submitAnswer);
+            }
+            
+            if (nextQuestionBtn) {
+                nextQuestionBtn.addEventListener('click', nextQuestion);
+            }
+            
+            if (restartQuizBtn) {
+                restartQuizBtn.addEventListener('click', restartQuiz);
+            }
+
+            // 初始化测验
+            displayQuestion();
+            
+            // 定义LinkText函数，使中文翻译部分能正常显示
+            function LinkText({term, text}) {
+                const a = document.createElement('a');
+                a.href = '#';
+                a.className = 'text-blue-600 hover:text-blue-800 hover:underline font-semibold';
+                a.textContent = text;
+                a.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.open(`https://www.google.com/search?q=${encodeURIComponent(term)}`, '_blank', 'noopener noreferrer');
+                });
+                return a;
+            }
         });
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>
